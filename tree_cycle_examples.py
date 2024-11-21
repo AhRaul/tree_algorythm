@@ -10,7 +10,7 @@ def print_names(start_dir):
     :param start_dir: стартовая директория, внутри которой ведется поиск файлов.
     :return: выводит в консоль список файлов, найденных в каталоге.
     """
-    search_queue = deque()  #Инициализируем двустороннюю очередь LIFO (Lost in, first out)
+    search_queue = deque()  #Инициализируем двустороннюю очередь LILO (Lost in, Lost out)
     search_queue.append(start_dir)  #Заполняем очередь папками, в которых нужно провести поиск
     while search_queue:             #Идем по циклу, пока очередь не опустеет.
         dir = search_queue.popleft()    #Берем название директории, из начала очереди.
